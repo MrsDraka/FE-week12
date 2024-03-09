@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--My app's title-->
+    <title>GlobalFlavorsHub App</title>
+
+    <!--I added Bootstrap css as well as a google font I wanted to use-->
+    <link
+      rel="stylesheet"
+      href="/node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="container bg-dark">
+    <!--Page's title-->
+
+    <div class="my-5">
+      <h1
+        class="text-center text-info"
+        style="font-family: 'Indie Flower', cursive"
+      >
+        GlobalFlavorsHub App
+      </h1>
+    </div>
+    <!--Made the form for users to add new foods in a card with a nice image (free to use) for aesthetics-->
+    <div class="container">
+      <div class="card mb-3 text-bg-info">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img
+              src="/images/food.jpg"
+              class="img-fluid rounded-start"
+              alt="image of spoons with different colored spices"
+            />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <p class="card-text">
+                Fill out the form below to include a new dish to the collection.
+              </p>
+              <p class="card-text">
+                <small class="text-body-secondary"
+                  >"Good food is all the sweeter when shared with good friends."
+                  -Proverb</small
+                >
+              </p>
+              <!--fields for the user to submit a new dish starts here-->
+
+              <div class="mb-3">
+                <label for="mealName" class="form-label">Dish Name</label>
+                <input type="text" class="form-control" id="mealName" />
+              </div>
+
+              <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <input type="text" class="form-control" id="description" />
+              </div>
+
+              <div class="mb-3">
+                <label for="origin" class="form-label">Country of Origin</label>
+                <input type="text" class="form-control" id="origin" />
+              </div>
+
+              <button id="submitFood" type="submit" class="btn btn-primary">
+                Submit
+              </button>
+
+              <p class="card-text my-3">
+                <small class="text-body-secondary"
+                  >"Food is the ingredient that binds us together"</small
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container my-5"> <h2 class="text-center text-info"
+      style="font-family: 'Indie Flower', cursive">Dish Gallery</h2></div>
+
+    <!--Div below is for rendering the foods-->
+    <div class="container" id="foodApp"></div>
+
+    <!--necessary scripts for the page to run-->
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="/script.js"></script>
+  </body>
+</html>
